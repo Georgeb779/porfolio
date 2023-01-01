@@ -10,6 +10,7 @@ export const SidebarItems = () => {
   return (
     <motion.aside
       className={style.sidebar}
+      data-testid="sidebar-items"
       variants={{
         open: {
           position: 'absolute',

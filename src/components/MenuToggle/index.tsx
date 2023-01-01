@@ -19,7 +19,7 @@ export const MenuToggle = ({ isOpen }: { isOpen: boolean }) => {
     />
   );
   return (
-    <svg className={style.svg}>
+    <svg className={style.svg} data-testid="svg">
       <AnimatePresence>
         {isOpen ? (
           <motion.g

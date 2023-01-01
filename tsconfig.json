@@ -36,6 +36,7 @@
     "incremental": true,
 
     "baseUrl": ".",
+    "types": ["cypress"],
     "paths": {
       "@/*": ["./src/*"],
       "@/public/*": ["./public/*"],
@@ -43,7 +44,12 @@
       "@/components/*": ["./src/components/*"]
     }
   },
-  "exclude": ["./out/**/*", "./node_modules/**/*", "cypress/**/*.ts"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": [
+    "./out/**/*",
+    "./node_modules/**/*",
+    "cypress/**/*.ts",
+    "**/*.spec.ts"
+  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "./jest-setup.ts"],
   "types": ["node", "jest", "@testing-library/jest-dom"]
 }
