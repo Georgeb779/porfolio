@@ -1,0 +1,12 @@
+.sidebar {
+  @apply absolute flex flex-col items-center justify-center w-[200px] h-screen bg-dark-blue-200 p-4 text-white;
+
+  li {
+    @apply text-lg font-bold mb-4;
+
+    &::after {
+      @apply block w-0 h-1 bg-white transition-all duration-300;
+      content: "";
+    }
+  }
+}
