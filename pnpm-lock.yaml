@@ -27,7 +27,7 @@ specifiers:
   eslint: ^8.30.0
   eslint-config-airbnb-base: ^15.0.0
   eslint-config-airbnb-typescript: ^17.0.0
-  eslint-config-next: ^13.1.0
+  eslint-config-next: ^13.1.1
   eslint-config-prettier: ^8.5.0
   eslint-plugin-cypress: ^2.12.1
   eslint-plugin-import: ^2.26.0
@@ -48,6 +48,7 @@ specifiers:
   install: ^0.13.0
   jest: ^29.3.1
   jest-environment-jsdom: ^29.3.1
+  json5: ^2.2.3
   lint-staged: ^13.1.0
   next: ^13.1.0
   next-seo: ^5.15.0
@@ -69,6 +70,7 @@ dependencies:
   framer-motion: 8.0.2_biqbaboplfbrettd7655fr4n2y
   inquirer: 8.2.5
   install: 0.13.0
+  json5: 2.2.3
   next: 13.1.1_3duxcpitbtplz62feflag7fwby
   next-seo: 5.15.0_q76c2b4vyoegvsbrcwkfvimnai
   next-sitemap: 3.1.43_syentjjt63dukspj2zj7hzem6y
@@ -8146,7 +8148,6 @@ packages:
       }
     engines: { node: ">=6" }
     hasBin: true
-    dev: true
 
   /jsonfile/6.1.0:
     resolution:
