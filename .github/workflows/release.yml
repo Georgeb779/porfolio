@@ -26,7 +26,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "pnpm"
-      - run: HUSKY=0 pnpm ci
+      - run: HUSKY=0 pnpm ci # Disable Husky hooks
 
       - name: Release
         env:
