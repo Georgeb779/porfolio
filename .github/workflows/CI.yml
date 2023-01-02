@@ -1,5 +1,4 @@
 name: CI
-
 on:
   push:
     branches: [main]
@@ -22,8 +21,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "npm"
-      - run: npm ci
+          cache: "pnpm"
+      - run: pnpm install
       - run: npm run build-prod
 
   test:
@@ -42,8 +41,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "npm"
-      - run: npm ci
+          cache: "pnpm"
+      - run: pnpm install
 
       - if: github.event_name == 'pull_request'
         name: Validate all commits from PR
