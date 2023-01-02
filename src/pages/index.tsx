@@ -1,10 +1,8 @@
-import { NavBar } from '@/components';
-
 const Index = () => {
   return (
     <>
       <div>
-        <NavBar />
+        <h1>Home</h1>
       </div>
     </>
   );

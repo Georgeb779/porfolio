@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-dark-blue-100;
+  @apply bg-dark-blue-200 font-mono;
   -webkit-text-size-adjust: 100%;
   overflow: hidden;
 }
@@ -12,13 +12,12 @@ input,
 textarea,
 button,
 select,
+div,
 a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-nav {
-  @apply flex flex-col items-center justify-between bg-dark-blue-200 absolute h-screen w-14;
-}
+
 .background {
   display: flex;
   align-items: center;
