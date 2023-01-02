@@ -1,10 +1,12 @@
 import { motion, useCycle } from 'framer-motion';
+import Link from 'next/link';
 import * as React from 'react';
 
 import { useDimensions } from '@/utils';
 
 import { MenuToggle } from '../MenuToggle';
 import { SidebarItems } from '../SidebarItems';
+import SocialSection from '../SocialSection';
 import style from './style.module.scss';
 
 export const NavBar = () => {
@@ -14,9 +16,10 @@ export const NavBar = () => {
 
   return (
     <>
-      <motion.nav>
-        <div>Hello peter</div>
-
+      <motion.nav className={style.navbar__container}>
+        <div className={style.navbar__logo}>
+          <Link href="/">G</Link>
+        </div>
         <motion.div
           initial={false}
           animate={isOpen ? 'open' : 'closed'}
@@ -32,10 +35,9 @@ export const NavBar = () => {
           >
             <MenuToggle isOpen={isOpen} />
           </motion.button>
-
           <SidebarItems />
         </motion.div>
-        <div>Hello peter</div>
+        <SocialSection />
       </motion.nav>
     </>
   );
