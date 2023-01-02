@@ -1,0 +1,17 @@
+.social_icon__container {
+  @apply flex flex-col items-center justify-end gap-4 p-4;
+
+  a {
+    transition: all 1s ease-in-out;
+    svg {
+      @apply fill-white scale-100;
+      transition: all 0.5s ease-in-out;
+    }
+
+    &:hover {
+      svg {
+        @apply fill-intense-red-100 scale-125;
+      }
+    }
+  }
+}

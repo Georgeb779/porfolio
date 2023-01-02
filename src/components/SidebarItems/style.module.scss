@@ -1,12 +1,51 @@
 .sidebar {
-  @apply absolute flex flex-col items-center justify-center w-[200px] h-screen bg-dark-blue-200 p-4 text-white;
+  border-left: 0.5px solid #ffffff14;
+  @keyframes slideIn {
+    0% {
+      transform: scaleX(0);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+
+  @apply absolute flex flex-col items-center justify-center w-[200px] h-screen bg-dark-blue-100 text-white;
 
   li {
     @apply text-lg font-bold mb-4;
 
+    a {
+      @apply flex items-center rounded-full p-4;
+    }
+
+    &:hover {
+      a {
+        @apply text-intense-red-100;
+      }
+
+      &::after {
+        @apply bg-intense-red-100;
+        transform: scaleX(1);
+        animation-name: slideIn;
+        animation-duration: 1s;
+      }
+    }
+
     &::after {
-      @apply block w-0 h-1 bg-white transition-all duration-300;
       content: "";
+      @apply absolute w-full h-[1px] bg-white;
+      transition: all 0.3s ease-in-out;
+      transform-origin: 0px 50% 0px;
+    }
+    &.active {
+      @apply text-intense-red-100;
+
+      &::after {
+        transform: scaleX(1);
+        @apply bg-intense-red-100 text-intense-red-100;
+        animation-name: slideIn;
+        animation-duration: 1s;
+      }
     }
   }
 }
