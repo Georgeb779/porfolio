@@ -1,0 +1,7 @@
+.app__container {
+  @apply flex;
+
+  main {
+    @apply flex items-center justify-center w-full;
+  }
+}
