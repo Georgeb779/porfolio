@@ -7,7 +7,13 @@ import { itemVariants } from '@/animations';
 
 import style from './style.module.scss';
 
-export const SidebarItems = () => {
+export const SidebarItems = ({
+  setIsOpen,
+  isOpen,
+}: {
+  isOpen: boolean;
+  setIsOpen: (isOpen: boolean) => void;
+}) => {
   const routes = [
     { name: 'Home', url: '/' },
     { name: 'About', url: '/about' },
@@ -25,7 +31,7 @@ export const SidebarItems = () => {
           position: 'absolute',
           visibility: 'visible',
           opacity: 1,
-          x: 49,
+          x: 45,
           transition: {
             delay: 0.3,
             stiffness: 20,
@@ -54,8 +60,9 @@ export const SidebarItems = () => {
             key={index}
             variants={itemVariants(index)}
             className={asPath === route.url ? style.active : ''}
+            onClick={() => setIsOpen(!isOpen)}
           >
-            <Link href={route.url}> {route.name}</Link>
+            <Link href={route.url}>{route.name}</Link>
           </motion.li>
         ))}
       </motion.ul>

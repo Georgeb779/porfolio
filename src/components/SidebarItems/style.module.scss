@@ -21,6 +21,7 @@
     &:hover {
       a {
         @apply text-intense-red-100;
+        transition: all 0.3s ease-in-out;
       }
 
       &::after {
@@ -33,7 +34,7 @@
 
     &::after {
       content: "";
-      @apply absolute w-full h-[1px] bg-white;
+      @apply absolute w-full h-[0.5px] bg-white;
       transition: all 0.3s ease-in-out;
       transform-origin: 0px 50% 0px;
     }
