@@ -40,7 +40,7 @@ export const SidebarItems = ({
           },
         },
         closed: {
-          x: -100,
+          x: -250,
           position: 'absolute',
           opacity: 0,
           zIndex: -1,
