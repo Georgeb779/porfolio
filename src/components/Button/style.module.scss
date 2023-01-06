@@ -1,14 +1,7 @@
 .btn_primary {
-  @apply font-bold;
   $speed: 0.5s;
 
-  opacity: 1;
-  line-height: 50px;
-  position: relative;
-  text-align: center;
-  letter-spacing: 1px;
-  display: inline-block;
-  text-transform: uppercase;
+  @apply relative font-bold opacity-100 leading-[50px] text-center tracking-[1px] inline-block uppercase;
 
   &:hover {
     &:after {
@@ -23,28 +16,15 @@
   }
 
   &:after {
-    @apply text-white bg-intense-red-100;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    width: 100%;
-    display: block;
+    @apply text-white bg-intense-red-100 top-0 left-0 opacity-0 w-full block absolute;
     transition: $speed;
-    position: absolute;
     content: attr(data-back);
     transform: translateY(-50%) rotateX(90deg);
   }
 
   &:before {
-    @apply text-white bg-dark-blue-100 ring-1 ring-inset ring-intense-red-100;
-    top: 0;
-    left: 0;
-    opacity: 1;
-    display: block;
-    padding: 0 30px;
-    line-height: 50px;
+    @apply text-white bg-dark-blue-100 ring-1 ring-inset ring-intense-red-100 top-0 left-0 opacity-100 w-full block leading-[50px] relative pl-2 pr-2 lg:pl-8 lg:pr-8;
     transition: $speed;
-    position: relative;
     content: attr(data-front);
     transform: translateY(0) rotateX(0);
   }

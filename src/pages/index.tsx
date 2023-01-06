@@ -1,5 +1,6 @@
 import { Bounds, Environment, OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
+import Link from 'next/link';
 import { Suspense, useEffect, useState } from 'react';
 
 import { Button, PersonalIcon } from '@/components';
@@ -55,25 +56,20 @@ const Index = () => {
               work in both
               <span className={style.bold}> Frontend</span> and
               <span className={style.bold}> Backend</span> development. I am
-              proficient in a variety of programming languages and frameworks,
-              <span className={style.bold}> read more.</span>
+              proficient in a variety of programming languages and frameworks.
+              <br />
+              <span className={style.link}>
+                <Link href="/about">About me</Link>
+              </span>
             </p>
           </div>
           <div className={style.btn__container}>
-            <Button
-              dataText={'Portfolio'}
-              className="primary"
-              onclick={() => {
-                console.log('Hello');
-              }}
-            />
-            <Button
-              dataText={'Contact Me'}
-              className="primary"
-              onclick={() => {
-                console.log('Hello');
-              }}
-            />
+            <Link href="/portfolio">
+              <Button dataText={'Portfolio'} className="primary" />
+            </Link>
+            <Link href="/contact">
+              <Button dataText={'Contact Me'} className="primary" />
+            </Link>
           </div>
         </div>
       </div>
