@@ -1,0 +1,51 @@
+.home__container {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center items-center;
+
+  .personal_icon__container {
+    @apply cursor-grab h-[235px] w-[235px] md:h-[380px] lg:h-[600px]  md:w-[500px] lg:w-[600px] flex items-center justify-center;
+
+    canvas {
+      @apply h-[235px] w-[235px] md:h-[380px] lg:h-[600px]  md:w-[500px] lg:w-[600px];
+    }
+  }
+
+  .personal_info__container {
+    @apply p-4 md:p-4 lg:p-4 md:max-w-[660px];
+  }
+
+  @apply font-sans;
+  p {
+    @apply font-sans text-white;
+  }
+  p:first-of-type {
+    @apply text-2xl md:text-4xl lg:text-5xl font-bold;
+  }
+  p:nth-of-type(2) {
+    @apply text-xl md:text-3xl lg:text-4xl font-semibold;
+  }
+  p:nth-of-type(3) {
+    @apply text-xl md:text-2xl lg:text-3xl mb-2 md:mb-6  font-semibold;
+  }
+  p:last-of-type {
+    @apply text-sm md:text-sm lg:text-lg font-normal;
+  }
+
+  .bold {
+    @apply text-intense-red-100;
+    font-weight: 700;
+  }
+
+  .link {
+    @apply underline text-intense-red-100 font-medium;
+
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      @apply  text-white;
+    }
+  }
+
+  .btn__container {
+    @apply flex items-center gap-4 mt-4 md:mt-10;
+  }
+}
