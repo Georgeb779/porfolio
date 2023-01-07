@@ -1,9 +1,9 @@
-import { Bounds, Environment, OrbitControls } from '@react-three/drei';
+import { Bounds, OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import Link from 'next/link';
 import { Suspense, useEffect, useState } from 'react';
 
-import { Button, PersonalIcon } from '@/components';
+import { Button, Sphere } from '@/components';
 import style from '@/styles/home.module.scss';
 
 const Index = () => {
@@ -25,18 +25,17 @@ const Index = () => {
             camera={{ position: [5, 10, 5] }}
             resize={{ scroll: false, debounce: { scroll: 50, resize: 0 } }}
           >
+            <ambientLight intensity={0.7} />
+            <spotLight
+              intensity={0.4}
+              angle={0.5}
+              penumbra={1}
+              position={[5, 5, 5]}
+              castShadow
+            />
             <Bounds fit clip observe margin={boundValue}>
-              <ambientLight intensity={0.7} />
-              <spotLight
-                intensity={0.4}
-                angle={0.5}
-                penumbra={1}
-                position={[5, 5, 5]}
-                castShadow
-              />
               <Suspense fallback={null}>
-                <PersonalIcon />
-                <Environment preset="forest" />
+                <Sphere />
               </Suspense>
               <OrbitControls autoRotate makeDefault enableZoom={false} />
             </Bounds>

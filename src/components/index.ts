@@ -3,3 +3,4 @@ export * from './MenuToggle';
 export * from './NavBar';
 export * from './PersonalIcon';
 export * from './SidebarItems';
+export * from './Sphere';
