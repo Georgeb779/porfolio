@@ -1,7 +1,7 @@
 .btn_primary {
   $speed: 0.5s;
 
-  @apply relative font-bold opacity-100 leading-[50px] text-center tracking-[1px] inline-block uppercase;
+  @apply text-xs md:text-sm leading-[35px] relative font-bold opacity-100 md:leading-[50px] text-center tracking-[1px] inline-block uppercase;
 
   &:hover {
     &:after {
@@ -23,7 +23,7 @@
   }
 
   &:before {
-    @apply text-white bg-dark-blue-100 ring-1 ring-inset ring-intense-red-100 top-0 left-0 opacity-100 w-full block leading-[50px] relative pl-2 pr-2 lg:pl-8 lg:pr-8;
+    @apply text-white bg-dark-blue-100 ring-1 ring-inset ring-intense-red-100 top-0 left-0 opacity-100 w-full block leading-[35px]  md:leading-[50px] relative pl-2 pr-2 lg:pl-8 lg:pr-8;
     transition: $speed;
     content: attr(data-front);
     transform: translateY(0) rotateX(0);
