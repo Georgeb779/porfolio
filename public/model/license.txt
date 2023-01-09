@@ -1,11 +1,11 @@
 Model Information:
-* title:	Stylized Hacked PC #SketchfabWeeklyChallenge
-* source:	https://sketchfab.com/3d-models/stylized-hacked-pc-sketchfabweeklychallenge-192ab9d4706f4ffaaf22f9a299289d75
-* author:	ottobite (https://sketchfab.com/ottobite)
+* title:	Forest House
+* source:	https://sketchfab.com/3d-models/forest-house-52429e4ef7bf4deda1309364a2cda86f
+* author:	peachyroyalty (https://sketchfab.com/peachyroyalty)
 
 Model License:
-* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
-* requirements:	Author must be credited. Commercial use is allowed.
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "Stylized Hacked PC #SketchfabWeeklyChallenge" (https://sketchfab.com/3d-models/stylized-hacked-pc-sketchfabweeklychallenge-192ab9d4706f4ffaaf22f9a299289d75) by ottobite (https://sketchfab.com/ottobite) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+This work is based on "Forest House" (https://sketchfab.com/3d-models/forest-house-52429e4ef7bf4deda1309364a2cda86f) by peachyroyalty (https://sketchfab.com/peachyroyalty) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

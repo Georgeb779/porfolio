@@ -1,13 +1,21 @@
-import { Bounds, OrbitControls } from '@react-three/drei';
+import {
+  Bounds,
+  OrbitControls,
+  PerspectiveCamera,
+  useProgress,
+} from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import Link from 'next/link';
 import { Suspense, useEffect, useState } from 'react';
 
-import { Button, Sphere } from '@/components';
+import { Button, PersonalIcon } from '@/components';
 import style from '@/styles/home.module.scss';
 
 const Index = () => {
   const [boundValue, setBoundValue] = useState(1.5);
+  const { progress } = useProgress();
+
+  console.log(progress);
 
   useEffect(() => {
     setTimeout(() => {
@@ -19,12 +27,7 @@ const Index = () => {
     <>
       <div className={style.home__container}>
         <div className={style.personal_icon__container}>
-          <Canvas
-            shadows
-            dpr={[1, 2]}
-            camera={{ position: [5, 10, 5] }}
-            resize={{ scroll: false, debounce: { scroll: 50, resize: 0 } }}
-          >
+          <Canvas>
             <ambientLight intensity={0.7} />
             <spotLight
               intensity={0.4}
@@ -33,11 +36,22 @@ const Index = () => {
               position={[5, 5, 5]}
               castShadow
             />
+            <PerspectiveCamera
+              makeDefault
+              position={[-210, 100, 190]}
+              fov={60}
+              zoom={1.3}
+            />
             <Bounds fit clip observe margin={boundValue}>
               <Suspense fallback={null}>
-                <Sphere />
+                <PersonalIcon />
               </Suspense>
-              <OrbitControls autoRotate makeDefault enableZoom={false} />
+              <OrbitControls
+                autoRotate
+                makeDefault
+                enableZoom={false}
+                autoRotateSpeed={0.5}
+              />
             </Bounds>
           </Canvas>
         </div>

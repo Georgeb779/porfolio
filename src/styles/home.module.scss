@@ -2,7 +2,7 @@
   @apply grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center items-center;
 
   .personal_icon__container {
-    @apply cursor-grab h-[235px] w-[235px] md:h-[380px] lg:h-[600px]  md:w-[500px] lg:w-[600px] flex items-center justify-center;
+    @apply cursor-grab h-[235px] w-[235px] md:h-[380px] lg:h-[600px]  md:w-[500px] lg:w-[600px] flex items-center justify-center shadow-xl;
 
     canvas {
       @apply h-[235px] w-[235px] md:h-[380px] lg:h-[600px]  md:w-[500px] lg:w-[600px];
@@ -10,7 +10,7 @@
   }
 
   .personal_info__container {
-    @apply p-4 md:p-4 lg:p-4 md:max-w-[660px];
+    @apply p-4 md:p-4 lg:p-4 md:max-w-[660px] ;
   }
 
   @apply font-sans;
