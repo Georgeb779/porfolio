@@ -55,6 +55,6 @@
 }
 
 .navbar__container {
-  @apply grid grid-rows-3 justify-items-center bg-dark-blue-100 relative w-fit h-screen z-50;
+  @apply grid grid-rows-3 justify-items-center bg-dark-blue-100 relative w-fit z-50;
   box-shadow: rgb(0 0 0 / 15%) 0.75px 0.95px 2.6px;
 }
